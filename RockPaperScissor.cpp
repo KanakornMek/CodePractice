@@ -74,9 +74,21 @@ int main()
                     break;
                 case 2:
                     cout << "Com: paper\n";
+                    cout << "     _______\n";
+                    cout << "---'    ____)____\n";
+                    cout << "           ______)\n";
+                    cout << "          _______)\n";
+                    cout << "         _______)\n";
+                    cout << "---.__________)\n";
                     break;
                 case 3:
                     cout << "Com: scissor\n";
+                    cout << "    _______\n";
+                    cout << "---'   ____)____\n";
+                    cout << "          ______)\n";
+                    cout << "       __________)\n";
+                    cout << "      (____)\n";
+                    cout << "---.__(___)\n";
                     break;
             }
             
@@ -122,21 +134,22 @@ int main()
             printf("DRAW\n");
         if(userpoint < compoint)
             printf("You lost this game\n");
-        for (int i = 0; i == ;)
+        for (int i = 1; i != 0;)
         {
             printf("enter 0 to exit\nenter other number to continue");
-            scanf(" %c", &exit);
+            scanf(" %d", &exit);
             if('A' <= exit&& exit <= 'Z')
             {
-               i = 1;
+                i = 1;
             }
             else if('a' <= exit&& exit <= 'z')
             {
-               i = 1;
+                i = 1;
             }
-            else
+            else 
             {
                 system("clear");
+                i = 0;
             }
         }
             
