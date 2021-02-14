@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <time.h> 
+#include <math.h>
   
 using namespace std;
 
@@ -40,8 +40,28 @@ int main()
     char exit = 1;
     while(exit)
     {
+        
+        int inf = 0,round = 0;
+        char input[3];
+        printf("How many rounds you want to play?\n");
+        printf("type inf to play infinite round\n");
+        scanf("%s", input);
+        if(input[0] == 'i'&& input[1] == 'n' && input[2] == 'f')
+        {
+            inf = 1;
+            round = 2; 
+        }
+        else
+        {
+            for(int i = 0; input[i] != 0; i++)
+            {
+                round = (input[i]-'0')*(pow(10,i)) + round;
+            }
+        }
+        
+
         int compoint = 0,userpoint = 0;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < round; i++)
         {        
             string a;
             int user = 0,com = 0;
@@ -124,6 +144,11 @@ int main()
                 cout << "You WIN\n";
                 userpoint++;
             }
+            printf("\n\nSCOREBOARD\n");
+            printf("user : %d\n",userpoint);
+            printf("com  : %d\n\n",compoint);
+            if(inf == 1)
+                i--;
             
         }
         printf("------------------------------------------\nSCORE\n");
